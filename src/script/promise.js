@@ -30,7 +30,7 @@ function getData(method,url){
 }
 
 function fetch() {
-	getData("GET","http://jsonplaceholder.typicode.com/todos").then(function(data){
+	getData("GET","https://jsonplaceholder.typicode.com/todos").then(function(data){
 	let todos=JSON.parse(data);
 	let output='';
 	for(let todo of todos) {
