@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body *{
+	font-family: 'Roboto', sans-serif;
+}
+.container .row{
+	padding: 16px 12px 32px 12px;
+}
+.container .row:nth-of-type(odd){
+	background-color:#f3f3f3;
+}
+.container .row:nth-of-type(1){
+	background-color:#fff;
+}
+.result{
+	border:1px #888 solid;
+	padding:10px;
+	min-height:64px;
+}
+
+#todoList{
+	height:120px;
+	overflow: auto;
+}
+#todoList li{
+	list-style:none;
+}

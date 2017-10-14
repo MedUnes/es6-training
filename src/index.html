@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning ES6 by medunes</title>
+ 
+    <!-- Style -->
+    <link type="text/css" href="style.css" rel="stylesheet" />
+    <link type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- /Style -->
+</head>
+<body>
+    <div class="container">
+ 
+        <!-- Header -->
+        <div class="row text-center">
+            <h1>Learning ES6 <a href="http://github.com/medunes" target="_blank" ><i class="fa fa-github"></i></a></h1>
+            <p>by <a href="http://medunes.net" target="_blank">Medunes</a> </p>
+            <hr>
+            <h4>
+                A <strong>Workshop</strong> on the <a href="https://www.youtube.com/watch?v=2LeqilIw-28&list=PLillGF-RfqbZ7s3t6ZInY3NjEOOX7hsBv" target="_blank">Traversy media JavaScript ES6 / ES2015 Tutorials Youtube videos</a>
+            </h4>
+            <hr>
+        </div>
+        <!-- /Header -->
+ 
+        <!-- Chapter 3 -->
+        <div class="row" id="chapted-3">
+            <h2><span class="alert alert-warning"><a target="_blank" href="https://www.youtube.com/watch?v=KWUcTt15fQs">Chapter3:</a></span> <kbd>let</kbd> & <kbd>const</kbd> <a class="btn btn-success btn-large" onClick="console.clear()">Clear console</a></h2>
+            <div class="col-xs-6">
+                <h3><kbd>let</kbd> compared to <kbd>var</kbd></h3>
+                <a class="btn btn-default btn-large" onClick="testVar()">testVar()</a>
+                <a class="btn btn-default btn-large" onClick="testLet()">testLet()</a>
+            </div>
+            <div class="col-xs-6">
+                <h3><kbd>const</kbd> with pushing and assignement</h3>
+                <a class="btn btn-default btn-large" onClick="pushColor('red');pushColor('blue')">pushColor()</a>
+                <a class="btn btn-default btn-large" onClick="assignColor('green')">assignColor()</a>
+            </div>
+        </div>
+        <!-- /Chapter 3 -->
+        <hr>
+        <!-- Chapter 4 -->
+        <div class="row" id="chapted-4">
+            <h2><span class="alert alert-warning"><a target="_blank" href="https://www.youtube.com/watch?v=RBLIm5LMrmc">Chapter4:</a></span> Classes and Inheritance <a class="btn btn-success btn-large" onClick="console.clear()">Clear console</a></h2>
+            <div class="col-xs-6">
+                <h3>Call a methods on objects and classes:</h3>
+                <a class="btn btn-default btn-large" onClick="bob=new User('bob','bob@email.com','12345');bob.register()">bob.register()</a>
+                <a class="btn btn-default btn-large" onClick="User.countUsers()">User.countUsers()</a>
+            </div>
+            <div class="col-xs-6">
+                <h3>Inheritance</h3>
+                <a class="btn btn-default btn-large" onClick="let mike=new Member('Mike','mike@gmail.com','1234','Standard');mike.getPackage()">mike.getPackage()</a>
+                <a class="btn btn-default btn-large" onClick="let mike=new Member('Mike','mike@gmail.com','1234','Standard');mike.register()">mike.register()</a>
+            </div>
+        </div>
+        <!-- /Chapter 4 -->
+        <hr>
+        <!-- Chapter 5 -->
+        <div class="row" id="chapted-5">
+            <h2><span class="alert alert-warning"><a target="_blank" href="https://www.youtube.com/watch?v=INPob8yPyBo">Chapter5:</a></span> Template Literals <a class="btn btn-success btn-large" onClick="document.getElementById('template').innerHTML=''">Clear template</a></h2>
+            <div class="col-xs-6">
+                <h3>Include variables</h3>
+                <a class="btn btn-default btn-large" onClick="showTemplate()">showTemplate()</a>
+            </div>
+            <div class="col-xs-6">
+                <div class="result" id="template"></div>
+            </div>
+        </div>
+        <!-- /Chapter 5 -->
+        <hr>
+        <!-- Chapter 6 -->
+        <div class="row" id="chapted-6">
+            <h2><span class="alert alert-warning"><a target="_blank" href="https://www.youtube.com/watch?v=XGG-OY8pJqA">Chapter6:</a></span> New String & Number Methods <a class="btn btn-success btn-large" onClick="console.clear()">Clear console</a></h2>
+            <div class="col-xs-6">
+                <h3>Start, End, Include</h3>
+                <div class="col-xs-6">
+                    <div class="form-group" >
+                        <label for="txtString">Main String</label>
+                        <textarea class="form-control" rows="5" id="txtString">Hello, my name is Brad and I love JavaScript</textarea>
+                    </div>
+                    <div class="form-group" >
+                        <label for="txtStarts">Starts with:</label>
+                        <input class="form-control" type="text" id="txtStarts" value="Hello">
+                    </div>
+                    <div class="form-group" >
+                        <label for="txtEnds">Ends with:</label>
+                        <input class="form-control" type="text" id="txtEnds" value="JavaScript">
+                    </div>
+                    <div class="form-group" >
+                        <label for="txtIncludes">Includes:</label>
+                        <input class="form-control" type="text" id="txtIncludes" value="love">
+                    </div>
+                    <a class="btn btn-default btn-large" onClick="testSatrtsWith(txtString.value,txtStarts.value,'chap6-result')">startsWith()</a>
+                    <a class="btn btn-default btn-large" onClick="testEndsWith(txtString.value,txtEnds.value,'chap6-result')">endsWith()</a>
+                    <a class="btn btn-default btn-large" onClick="testIncludes(txtString.value,txtIncludes.value,'chap6-result')">includes()</a>
+                </div>
+                <div class="col-xs-6">
+                    <div class="result text-center" id="chap6-result"></div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <h3>Number functions</h3>
+                <h4>Hex, Binary & Octal notations</h4>
+                <div class="form-group" >
+                    <label>Hex notation: <kbd>0xFF</kbd></label>
+                    <a class="btn btn-info btn-xs" onClick="hexNotation(0xFF)">Value on console</a>
+                </div>
+                <div class="form-group" >
+                    <label>Binary notation: <kbd>0b101011</kbd></label>
+                    <a class="btn btn-info btn-xs" onClick="binaryNotation(0b101011)">Value on console</a>
+                </div>
+                <div class="form-group" >
+                    <label>Octal notation: <kbd>0o543</kbd></label>
+                    <a class="btn btn-info btn-xs" onClick="octalNotation(0o543)">Value on console</a>
+                </div>
+                <h4>Number.isFinite(), Number.isNaN() & Number.isInteger()</h4>
+                <div class="form-group" >
+                    <label><kbd>isFinite()</kbd></label>
+                    <a class="btn btn-info btn-xs" onClick="console.log(Number.isFinite(-3))">isFinite(-3)</a>
+                    <a class="btn btn-info btn-xs" onClick="console.log(Number.isFinite(Infinity))">isFinite(Infinity)</a>
+                    <a class="btn btn-info btn-xs" onClick="console.log(Number.isFinite(NaN))">isFinite(NaN)</a>
+                </div>
+                <div class="form-group" >
+                    <label><kbd>isNaN()</kbd></label>
+                    <a class="btn btn-info btn-xs" onClick="console.log(Number.isNaN(-3))">isNaN(NaN)</a>
+                    <a class="btn btn-info btn-xs" onClick="console.log(Number.isNaN(1))">isNaN(1)</a>
+                    <a class="btn btn-info btn-xs" onClick="console.log(Number.isNaN('string'))">isNaN("string")</a>
+                </div>
+                <div class="form-group" >
+                    <label><kbd>isInteger()</kbd></label>
+                    <a class="btn btn-info btn-xs" onClick="console.log(Number.isInteger(NaN))">isInteger(NaN)</a>
+                    <a class="btn btn-info btn-xs" onClick="console.log(Number.isInteger(2))">isInteger(2)</a>
+                    <a class="btn btn-info btn-xs" onClick="console.log(Number.isInteger(-2))">isInteger(-2)</a>
+                    <a class="btn btn-info btn-xs" onClick="console.log(Number.isInteger(Infinity))">isInteger(Infinity)</a>
+                </div>
+            </div>
+        </div>
+        <!-- /Chapter 6 -->
+        <hr>
+        <!-- Chapter 7 -->
+        <div class="row" id="chapted-7">
+            <h2><span class="alert alert-warning"><a target="_blank" href="https://www.youtube.com/watch?v=Stne4zasR8M">Chapter7:</a></span> Default parameters & Spread Operators  <a class="btn btn-success btn-large" onClick="console.clear()">Clear console</a></h2>
+            <div class="col-xs-6">
+                <h3>Default Parameters</h3>
+                <kbd>greet($greeting = 'Hello World')</kbd><a class="btn btn-info btn-xs" onClick="greet($greeting = 'Hello World')">Run on console</a>
+            </div>
+            <div class="col-xs-6">
+                <h3>Spread Operator</h3>
+                <kbd>test(... args1)</kbd><a class="btn btn-info btn-xs" onClick="test(... args1)">Run on console</a>
+                <kbd>test(... args2)</kbd><a class="btn btn-info btn-xs" onClick="test(... args2)">Run on console</a>
+                <kbd>test(... args1, ...args2)</kbd><a class="btn btn-info btn-xs" onClick="test(... args1, ...args2)">Run on console</a>
+            </div>
+        <!-- /Chapter 7 -->
+        </div>
+        <hr>
+        <!-- Chapter 8 -->
+        <div class="row" id="chapted-8">
+            <h2><span class="alert alert-warning"><a target="_blank" href="https://www.youtube.com/watch?v=ycohYSx5h9w">Chapter8:</a></span> Set(), Map(), WeakSet() and WeakMap()  <a class="btn btn-success btn-large" onClick="console.clear()">Clear console</a></h2>
+            <div class="col-xs-6">
+                <h3>Set() & Map()</h3>
+                
+                <h4>Set()</h4>
+                               
+                <!-- Test -->
+                <p>
+                    <kbd>mySet.add('100');</kbd>
+                    <a class="btn btn-info btn-xs" onClick="mySet.add('100');console.log(mySet);">Run on console</a>
+                </p>
+                
+                <!-- Test -->
+                <p>
+                    <kbd>mySet.add({'a:1,b:2'});</kbd>
+                    <a class="btn btn-info btn-xs" onClick="mySet.add({'a':1,'b':2});console.log(mySet);">Run on console</a>
+                </p>
+                
+                <!-- Test -->
+                <p>
+                    <kbd>mySet.delete(22);</kbd>
+                    <a class="btn btn-info btn-xs" onClick="mySet.delete(22);console.log(mySet);">Run on console</a>
+                </p>
+                
+                <!-- Test -->
+                <p>
+                    <kbd>mySet.add('200');</kbd>
+                    <a class="btn btn-info btn-xs" onClick="mySet.add('200');console.log(mySet);">Run on console</a>
+                </p>
+                
+                <!-- Test -->
+                <p>
+                    <kbd>mySet.clear();</kbd>
+                    <a class="btn btn-info btn-xs" onClick="mySet.clear();console.log(mySet);">Run on console</a>
+                </p>
+                
+                <!-- Test -->
+                <p>
+                    <kbd>mySet.size</kbd>
+                    <a class="btn btn-info btn-xs" onClick="console.log(mySet.size)">Run on console</a>
+                </p>
+
+                <!-- Test -->
+                <p>
+                    <kbd>mySet.forEach()</kbd>
+                    <a class="btn btn-info btn-xs" onClick="mySet.forEach(function(val){console.log(val)})">Run on console</a>
+                </p>
+                <h4>Map()</h4>
+                               
+                <!-- Test -->
+                <p>
+                    <kbd>myMap.set('c3','Foo');</kbd>
+                    <a class="btn btn-info btn-xs" onClick="myMap.set('c3','Foo');console.log(myMap);">Run on console</a>
+                </p>
+                
+                <!-- Test -->
+                <p>
+                    <kbd>myMap.delete('a1');</kbd>
+                    <a class="btn btn-info btn-xs" onClick="myMap.delete('a1');console.log(myMap);">Run on console</a>
+                </p>
+            </div>
+            <div class="col-xs-6">
+                <h3>WeakSet() & WeakMap()</h3>
+                
+                <h4>WeakSet()</h4>
+                               
+                <!-- Test -->
+                <p>
+                    <kbd>console.log(carWeakSet);</kbd>
+                    <a class="btn btn-info btn-xs" onClick="console.log(carWeakSet);">Run on console</a>
+                </p>
+                
+                <!-- Test -->
+                <p>
+                    <kbd>carWeakSet.add(car1)</kbd>
+                    <a class="btn btn-info btn-xs" onClick="carWeakSet.add(car1);console.log(carWeakSet);">Run on console</a>
+                </p>
+                
+                <!-- Test -->
+                <p>
+                    <kbd>carWeakSet.add(car2)</kbd>
+                    <a class="btn btn-info btn-xs" onClick="carWeakSet.add(car2);console.log(carWeakSet);">Run on console</a>
+                </p>
+                
+                <!-- Test -->
+                <p>
+                    <kbd>carWeakSet.delete(car1)</kbd>
+                    <a class="btn btn-info btn-xs" onClick="carWeakSet.delete(car1);console.log(carWeakSet);">Run on console</a>
+                </p>
+                
+                <h4>WeakMap()</h4>
+                               
+                <!-- Test -->
+                <p>
+                    <kbd>console.log(carWeakMap)</kbd>
+                    <a class="btn btn-info btn-xs" onClick="console.log(carWeakMap)">Run on console</a>
+                </p>
+                
+                <!-- Test -->
+                <p>
+                    <kbd>carWeakMap.set(key1,car1)</kbd>
+                    <a class="btn btn-info btn-xs" onClick="carWeakMap.set(key1,car1);console.log(carWeakMap);">Run on console</a>
+                </p>
+
+                <!-- Test -->
+                <p>
+                    <kbd>carWeakMap.set(key2,car2)</kbd>
+                    <a class="btn btn-info btn-xs" onClick="carWeakMap.set(key2,car2);console.log(carWeakMap);">Run on console</a>
+                </p>
+
+                <!-- Test -->
+                <p>
+                    <kbd>carWeakMap.delete(key2);</kbd>
+                    <a class="btn btn-info btn-xs" onClick="carWeakMap.delete(key2);console.log(carWeakMap);">Run on console</a>
+                </p>
+            </div>
+        </div>
+        <!-- /Chapter 8 -->
+        <hr>
+        <!-- Chapter 9 -->
+        <div class="row" id="chapted-9">
+            <h2><span class="alert alert-warning"><a target="_blank" href="https://www.youtube.com/watch?v=u4URamXstM0">Chapter9:</a></span> Arrow Functions  <a class="btn btn-success btn-large" onClick="console.clear()">Clear console</a></h2>
+            <div class="col-xs-6">
+                <h3>ES5 Workarounds..</h3>                              
+                <!-- Test -->
+                <p>
+                    Access <kbd>this</kbd> without workaround
+                    <a class="btn btn-info btn-xs" onClick="let pre = new Prefixer('Hello');pre.prefixArrayFaulty(['Brad'],['Jeff']);">Run on console</a>
+                </p>
+                <!-- Test -->
+                <p>
+                    Access <kbd>this</kbd> with a <kbd>that</kbd> workaround
+                    <a class="btn btn-info btn-xs" onClick="let pre = new Prefixer('Hello');pre.prefixArrayWorkaround(['Brad'],['Jeff']);">Run on console</a>
+                </p>
+            </div>
+            <div class="col-xs-6">
+                <h3>Arrow Functions</h3>
+                <p>
+                    Access this with arraow function:
+                    <a class="btn btn-info btn-xs" onClick="let pre = new Prefixer('Hello');pre.prefixArrayArrow(['Brad'],['Jeff']);">Run on console</a>
+                </p>
+                 <!-- Test -->
+                <p>
+                    Simple addition using arrow function <kbd>add(2,3)</kbd>:
+                    <a class="btn btn-info btn-xs" onClick="add(2,3)">Run on console</a>
+                </p>
+            </div>
+        </div>
+        <!-- /Chapter 9 -->
+        
+        <!-- Chapter 10 -->
+        <div class="row" id="chapted-10">
+            <h2><span class="alert alert-warning"><a target="_blank" href="https://www.youtube.com/watch?v=XJEHuBZQ5dU">Chapter10:</a></span> Promises  <a class="btn btn-success btn-large" onClick="console.clear()">Clear console</a></h2>
+            <div class="col-xs-6">
+                <h3>Simple proof of concepts</h3>                              
+                <!-- Test -->
+                <h4>Immediately resolved promise</h4>
+                <p>
+                    <kbd>Promise.resolve("Foo").then(function(res){console.log(res)});</kbd>
+                    <a class="btn btn-info btn-xs" onClick="Promise.resolve('Foo').then(function(res){console.log(res)});">Run on console</a>
+                </p>
+                <!-- Test -->
+                <h4><kbd>setTimeout()</kbd> resolved promise</h4>
+                <kbd>new Promise((resolve,reject)=>{setTimeout(()=>{resolve(4)},2000)}).then((res)=>{console.log(res+3)});</kbd>
+                <p>
+                    <a class="btn btn-info btn-xs" onClick="new Promise((resolve,reject)=>{setTimeout(()=>{resolve(4)},2000)}).then((res)=>{console.log(res+3)});">Run on console</a>
+                </p>
+            </div>
+            <div class="col-xs-6">
+                <h3>AJAX fetching promise</h3>
+                <p>
+                    <a class="btn btn-info btn-xs" onClick="fetch()">Run on console</a>
+                    <div id="todoList"></div>
+                </p>
+            </div>
+        </div>
+        <!-- /Chapter 10 -->
+        <!-- Chapter 11 -->
+        <div class="row" id="chapted-10">
+            <h2><span class="alert alert-warning"><a target="_blank" href="https://www.youtube.com/watch?v=dcP039DYzmE">Chapter11:</a></span> Generators  <a class="btn btn-success btn-large" onClick="console.clear()">Clear console</a></h2>
+            <div class="col-xs-6">
+                <h3>Manual step by step</h3>                              
+                <!-- Test -->
+                <kbd>console.log(g.next().value);</kbd>
+                <a class="btn btn-info btn-xs" onClick="console.log(g.next().value);">Run on console</a>
+            </div>
+            <div class="col-xs-6">
+                <h3>Loop Iterator</h3>
+                <kbd>for(let val of g){console.log(val)}</kbd>
+                <a class="btn btn-info btn-xs" onClick="var h=g1();for(let val of h){console.log(val)}">Run on console</a>
+            </div>
+        </div>
+        <!-- /Chapter 11 -->
+        <hr>
+    </div>
+ 
+    <!-- Scripts -->
+    <script type="text/javascript" src="script/let-and-const.js"></script>
+    <script type="text/javascript" src="script/classes-and-inheritance.js"></script>
+    <script type="text/javascript" src="script/template-literals.js"></script>
+    <script type="text/javascript" src="script/new-string-and-number-methods.js"></script>
+    <script type="text/javascript" src="script/default-parameters-and-spread-operators.js"></script>
+    <script type="text/javascript" src="script/set-and-map.js"></script>
+    <script type="text/javascript" src="script/arrow-functions.js"></script>
+    <script type="text/javascript" src="script/promise.js"></script>
+    <script type="text/javascript" src="script/generators.js"></script>
+
+    <script type="text/javascript" src="script/main.js"></script>
+    <!-- /Scripts -->
+</body>
+</html>
